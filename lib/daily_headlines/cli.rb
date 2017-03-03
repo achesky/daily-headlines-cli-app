@@ -12,7 +12,7 @@ class DailyHeadlines::CLI
     puts "Today's Headlines"
     puts <<-DOC.gsub /^\s*/, ''
     1. New York Times (NYT)
-    2. Wall Street Journal (WSJ)
+    2. Washington Post (WP)
     DOC
 
     @articles = DailyHeadlines::Article.today
@@ -27,12 +27,12 @@ class DailyHeadlines::CLI
        puts "list of articles from New York Times"
        list_articles_NYT
       elsif input == "WSJ"
-       puts "list of articles from Wall Street Journal"
-       list_articles_WSJ
+       puts "list of articles from Washington Post"
+       list_articles_WP
       elsif input == "list"
         list_papers
       else
-        puts "Unsure...please try again by typing 'NYT', 'WSJ' or 'list'."
+        puts "Unsure...please try again by typing 'NYT', 'WP' or 'list'."
         puts "If you would like to exit, type 'exit'"
       end
     end
@@ -42,8 +42,8 @@ class DailyHeadlines::CLI
     puts "reading NYT articles"
   end
 
-  def list_articles_WSJ
-    puts "reading WSJ articles"
+  def list_articles_WP
+    puts "reading WP articles"
   end
 
   def goodbye
