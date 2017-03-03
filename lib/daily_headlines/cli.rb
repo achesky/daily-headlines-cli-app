@@ -20,12 +20,20 @@ class DailyHeadlines::CLI
     input = gets.strip
     if input == "1"
       puts "list of articles from New York Times"
+      list_articles_NYT
     elsif input == "2"
       puts "list of articles from Wall Street Journal"
+      list_articles_WSJ
     end
   end
 
+  def list_articles_NYT
+    puts "reading NYT articles"
+  end
 
+  def list_articles_WSJ
+    puts "reading WSJ articles"
+  end
 
 end
 
