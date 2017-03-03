@@ -27,3 +27,31 @@ Name
 Author
 Blurb
 URL
+
+------
+Thoughts after building out "fake" articles would be: 
+  1 I'm going to decide how I want to differentiate articles from newspapers -- probably going to have to build another class
+
+  2 At what points / waht commands I want to output the different attributes of articles
+
+  3 What is outputted in what order?
+
+------
+
+Action Plan: 
+
+Build it out for New York Times until it's "real"
+
+Add in Newspaper class
+
+Add in Washington Post articles
+
+
+
+
+
+
+
+
+
+
