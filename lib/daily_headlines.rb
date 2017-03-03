@@ -1,5 +1,4 @@
-require "daily_headlines/version"
+#!/usr/bin/env ruby
 
-module DailyHeadlines
-  # Your code goes here...
-end
+require_relative "./daily_headlines/version"
+require_relative "./daily_headlines/cli"
