@@ -14,6 +14,8 @@ class DailyHeadlines::CLI
     1. New York Times (NYT)
     2. Wall Street Journal (WSJ)
     DOC
+
+    @articles = DailyHeadlines::Article.today
   end
 
   def menu
