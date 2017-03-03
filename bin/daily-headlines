@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby 
 
-require './lib/daily_headlines'
+require "bundler/setup"
+require "daily_headlines"
 
 DailyHeadlines::CLI.new.call
 
