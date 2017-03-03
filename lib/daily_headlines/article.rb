@@ -1,0 +1,4 @@
+class DailyHeadlines::Article
+
+
+end 
