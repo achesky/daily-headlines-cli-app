@@ -16,14 +16,18 @@ class DailyHeadlines::CLI
   end
 
   def menu
-    puts "Enter the paper you would like to read:"
-    input = gets.strip
-    if input == "1"
-      puts "list of articles from New York Times"
-      list_articles_NYT
-    elsif input == "2"
-      puts "list of articles from Wall Street Journal"
-      list_articles_WSJ
+    puts "Enter the paper you would like to read or type exit to exit"
+    input = nil
+    while input != "exit"
+
+      input = gets.strip
+      if input == "1"
+       puts "list of articles from New York Times"
+       list_articles_NYT
+     elsif input == "2"
+       puts "list of articles from Wall Street Journal"
+        list_articles_WSJ
+      end
     end
   end
 
