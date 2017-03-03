@@ -28,6 +28,9 @@ class DailyHeadlines::CLI
        list_articles_WSJ
       elsif input == "list"
         list_papers
+      else
+        puts "Unsure...please try again by typing 'NYT', 'WSJ' or 'list'."
+        puts "If you would like to exit, type 'exit'"
       end
     end
   end
