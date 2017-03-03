@@ -24,11 +24,11 @@ class DailyHeadlines::CLI
     while input != "exit"
       input = gets.strip
       if input == "NYT"
-       puts "list of articles from New York Times"
-       list_articles_NYT
+       puts "NYT articles list"
+       list_NYT_article
       elsif input == "WP"
        puts "list of articles from Washington Post"
-       list_articles_WP
+       list_WP_article
       elsif input == "list"
         list_papers
       else
@@ -38,12 +38,16 @@ class DailyHeadlines::CLI
     end
   end
 
-  def list_articles_NYT
-    puts "reading NYT articles"
+  def list_NYT_article
+    puts @articles[0].name
+    puts @articles[0].author
+    puts @articles[0].blurb
   end
 
-  def list_articles_WP
-    puts "reading WP articles"
+  def list_WP_article
+    puts @articles[1].name
+    puts @articles[1].author
+    puts @articles[1].blurb
   end
 
   def goodbye
