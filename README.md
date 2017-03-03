@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DailyHeadlines
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/daily_headlines`. To experiment with that code, run `bin/console` for an interactive prompt.
@@ -39,3 +40,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+=======
+# daily-headlines-cli-app
+This is a command line interface to show daily headlines from newspapers, created for the FlatIron School
+>>>>>>> 0f1b95f92e00202e1973a6a77e2a4b64acd2e4cf
