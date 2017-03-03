@@ -5,6 +5,7 @@ class DailyHeadlines::CLI
   def call
     list_papers
     menu
+    goodbye
   end
 
   def list_papers
@@ -42,6 +43,11 @@ class DailyHeadlines::CLI
   def list_articles_WSJ
     puts "reading WSJ articles"
   end
+
+  def goodbye
+    puts "Check back tomorrow for new headlines!"
+  end
+
 
 end
 
