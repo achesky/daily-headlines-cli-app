@@ -26,7 +26,7 @@ class DailyHeadlines::CLI
       if input == "NYT"
        puts "list of articles from New York Times"
        list_articles_NYT
-      elsif input == "WSJ"
+      elsif input == "WP"
        puts "list of articles from Washington Post"
        list_articles_WP
       elsif input == "list"
