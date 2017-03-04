@@ -60,7 +60,7 @@ class DailyHeadlines::Article
   x = doc.search("#topnews-100000004944660 h2.story-heading")
   article.URL = x.at('a').attributes["href"].value
 
-  return article.URL
+  article
 
 end
 

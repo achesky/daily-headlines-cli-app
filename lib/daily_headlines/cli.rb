@@ -13,7 +13,7 @@ class DailyHeadlines::CLI
 
     @articles = DailyHeadlines::Article.today
     @articles.each.with_index(1) do |article, i|
-      puts "#{i}. #{article.name} by #{article.author}"
+      puts "#{i}. #{article.name} #{article.author}"
     end
   end
 
