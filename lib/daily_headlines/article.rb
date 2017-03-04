@@ -18,7 +18,7 @@ class DailyHeadlines::Article
    article_2.blurb = "Three main Russian entities — Ambassador Sergey Kislyak, the Kremlin and Russian business interests — need to be evaluated in relation to the Trump network, starting with the president."
    article_2.URL = "https://www.washingtonpost.com/news/politics/wp/2017/03/03/the-web-of-relationships-between-team-trump-and-russia/"
 
-   [article_1, article_2]
+  [article_1, article_2]
 
  end
 

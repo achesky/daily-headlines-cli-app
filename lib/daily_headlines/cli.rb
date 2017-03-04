@@ -16,6 +16,11 @@ class DailyHeadlines::CLI
     DOC
 
     @articles = DailyHeadlines::Article.today
+    @articles.each.with_index(1) do |article, i|
+      puts "#{i}. #{article.name} by #{article.author}"
+      puts "#{article.blurb}"
+      puts "To read more click here: #{article.URL}"
+    end
   end
 
   def menu
@@ -24,11 +29,9 @@ class DailyHeadlines::CLI
     while input != "exit"
       input = gets.strip
       if input == "NYT"
-       puts "NYT articles list"
        list_NYT_article
       elsif input == "WP"
-       puts "list of articles from Washington Post"
-       list_WP_article
+        list_WP_article
       elsif input == "list"
         list_papers
       else
@@ -39,15 +42,11 @@ class DailyHeadlines::CLI
   end
 
   def list_NYT_article
-    puts @articles[0].name
-    puts @articles[0].author
-    puts @articles[0].blurb
+    # puts NYT Articles
   end
 
   def list_WP_article
-    puts @articles[1].name
-    puts @articles[1].author
-    puts @articles[1].blurb
+    #puts WP Articles
   end
 
   def goodbye
