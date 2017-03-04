@@ -10,16 +10,10 @@ class DailyHeadlines::CLI
 
   def list_papers
     puts "Today's Headlines from The New York Times"
-    puts <<-DOC.gsub /^\s*/, ''
-    1. article 1
-    2. article 2  
-    DOC
 
     @articles = DailyHeadlines::Article.today
     @articles.each.with_index(1) do |article, i|
       puts "#{i}. #{article.name} by #{article.author}"
-      puts "#{article.blurb}"
-      puts "To read more click here: #{article.URL}"
     end
   end
 
@@ -28,14 +22,14 @@ class DailyHeadlines::CLI
     input = nil
     while input != "exit"
       input = gets.strip
-      if input == 1
+      if input == "1"
        show_article
-      elsif input == 2
+      elsif input == "2"
         show_article
       elsif input == "list"
         list_papers
       else
-        puts "Unsure...please try again by typing 'NYT', 'WP' or 'list'."
+        puts "Unsure...please try again by typing '1', '2' or 'list'."
         puts "If you would like to exit, type 'exit'"
       end
     end
@@ -43,6 +37,7 @@ class DailyHeadlines::CLI
 
   def show_article
     #puts the description of a certain article
+    puts 'NYT'
   end
 
   def goodbye
