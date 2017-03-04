@@ -23,9 +23,9 @@ class DailyHeadlines::CLI
     while input != "exit"
       input = gets.strip
       if input == "1"
-       show_article(1)
+       show_article
       elsif input == "2"
-        show_article(2)
+        show_article
       elsif input == "list"
         list_papers
       else
@@ -35,12 +35,12 @@ class DailyHeadlines::CLI
     end
   end
 
-  def show_article(input)
+  def show_article
     #puts the description of a certain article
     puts 'NYT'
-    @articles = DailyHeadlines::Article.today
-    puts @articles[input].blurb
-    puts "To read more go to #{@articles[input].URL}"
+    @articles.each.with_index(1) do |article, i|
+      puts "To read more go to #{article.URL}"
+    end
   end
 
   def goodbye
