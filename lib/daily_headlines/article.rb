@@ -21,9 +21,10 @@ class DailyHeadlines::Article
     # prints authors and then the time posted
   blurb = doc.search("#topnews-100000004969948 ul").text
     #problems with printing out ' & "
-    
+  url = doc.search("#topnews-100000004969948 h2.a.story-heading").first.attr("href")
 
-  return blurb
+
+  return url
 
  end
 
