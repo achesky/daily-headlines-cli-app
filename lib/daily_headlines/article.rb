@@ -3,16 +3,22 @@ class DailyHeadlines::Article
   attr_accessor :name, :author, :blurb, :URL
 
   def self.today
+    self.scrape_articles
+  end
 
-   article_1 = self.new
-   article_1.name = "Fed Chief Sees Rate Increase in March, Earlier Than Expected"
-   article_1.author = "Binyamin Appelbaum"
-   article_1.blurb = "Janet L. Yellen, the Federal Reserve chairwoman, said Friday that the Fed is likely to raise its benchmark interest rate this month."
-   article_1.URL = "https://www.nytimes.com/2017/03/03/business/economy/federal-reserve-interest-rates.html"
+  def self.create_articles
+    articles = []
 
-   
 
-  [article_1]
+    articles
+
+ end
+
+ def self.scrape_articles
+  doc = Nokogiri::HTML(open("https://www.nytimes.com/?WT.z_jog=1&hF=f&vS=undefined"))
+  binding.pry
+  
+
 
  end
 

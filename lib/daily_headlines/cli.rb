@@ -12,7 +12,7 @@ class DailyHeadlines::CLI
     puts "Today's Headlines from The New York Times"
     puts <<-DOC.gsub /^\s*/, ''
     1. article 1
-    2. article 2
+    2. article 2  
     DOC
 
     @articles = DailyHeadlines::Article.today
