@@ -13,6 +13,8 @@ class DailyHeadlines::Article
 
     articles << self.scrape_NYT_2
 
+    articles << self.scrape_NYT_3
+
 
     articles
 
