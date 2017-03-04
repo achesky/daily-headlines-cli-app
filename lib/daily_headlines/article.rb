@@ -37,17 +37,30 @@ class DailyHeadlines::Article
  end
 
  def self.scrape_NYT_2
-  doc = Nokogiri::HTML(open("https://www.nytimes.com/?WT.z_jog=1&hF=t&vS=undefined"))
+  doc = Nokogiri::HTML(open("https://www.nytimes.com/?WT.z_jog=1&hF=f&vS=undefined"))
   article = self.new
 
-  article.name = doc.search("topnews-100000004944660 h2.story-heading").text
-  article.author = doc.search("topnews-100000004968745 p.byline").text
-  x = doc.search("topnews-100000004968745 h2.story-heading")
-  article.URL = x.at('a')
+  article.name = doc.search("#topnews-100000004969880 h2.story-heading").text
+  article.author = doc.search("#topnews-100000004969880 p.byline").text
+  x = doc.search("#topnews-100000004969880 h2.story-heading")
+  article.URL = x.at('a').attributes["href"].value
 
   article
 
  end
+
+ def self.scrape_NYT_3
+  doc = Nokogiri::HTML(open("https://www.nytimes.com/?WT.z_jog=1&hF=f&vS=undefined"))
+  article = self.new
+
+  article.name = doc.search("#topnews-100000004944660 h2.story-heading").text
+  article.author = doc.search("#topnews-100000004944660 p.byline").text
+  x = doc.search("#topnews-100000004944660 h2.story-heading")
+  article.URL = x.at('a').attributes["href"].value
+
+  return article.URL
+
+end
 
 
 end 
