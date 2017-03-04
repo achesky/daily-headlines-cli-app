@@ -9,10 +9,10 @@ class DailyHeadlines::CLI
   end
 
   def list_papers
-    puts "Today's Headlines"
+    puts "Today's Headlines from The New York Times"
     puts <<-DOC.gsub /^\s*/, ''
-    1. New York Times (NYT)
-    2. Washington Post (WP)
+    1. article 1
+    2. article 2
     DOC
 
     @articles = DailyHeadlines::Article.today
@@ -24,14 +24,14 @@ class DailyHeadlines::CLI
   end
 
   def menu
-    puts "Enter the paper you would like to read or type exit to exit"
+    puts "Enter the number of the article you would like to read, type list to show the list, or type exit to exit"
     input = nil
     while input != "exit"
       input = gets.strip
-      if input == "NYT"
-       list_NYT_article
-      elsif input == "WP"
-        list_WP_article
+      if input == 1
+       show_article
+      elsif input == 2
+        show_article
       elsif input == "list"
         list_papers
       else
@@ -41,12 +41,8 @@ class DailyHeadlines::CLI
     end
   end
 
-  def list_NYT_article
-    # puts NYT Articles
-  end
-
-  def list_WP_article
-    #puts WP Articles
+  def show_article
+    #puts the description of a certain article
   end
 
   def goodbye

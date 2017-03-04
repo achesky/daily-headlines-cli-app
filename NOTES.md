@@ -40,12 +40,7 @@ Thoughts after building out "fake" articles would be:
 
 Action Plan: 
 
-Build it out for New York Times until it's "real"
-
-Add in Newspaper class
-
-Add in Washington Post articles
-
+Build it out for New York Times !!!!!
 
 
 
