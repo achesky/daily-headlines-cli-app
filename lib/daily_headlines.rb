@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require 'Nokogiri'
 require 'open-uri'
-require 'pry'
 
 
 require_relative "./daily_headlines/version"
